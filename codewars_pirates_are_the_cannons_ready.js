@@ -23,5 +23,12 @@ If all answers are 'aye' then Fire! if one or more are 'nay' then Shiver me timb
 */
 
 const cannonsReady = (gunners) => {
-  //your solution here
+  let array = Object.keys(gunners);
+  for(let i = 0; i < array.length; i++) {
+    if(gunners[array[i]] !== 'aye') {
+      return 'Shiver me timbers!';
+    }
+  }
+
+  return 'Fire!';
 }
